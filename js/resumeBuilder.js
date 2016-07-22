@@ -2,30 +2,41 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-//$("#main").append('Anton')
-
-var bio = {'name' : 'Anton Iovbak', 'role' : 'Web Developer', 
-		'contacts' : {'email' : 'antoniovbak14@gmail.com', 'phone number' : '+7 777 002 44 35',
-		'GitHub account' : 'AInsolence', 'location' : 'Almaty'}, 
-		'welcome_message' : 'Hello! Nice to meet you here dudes!', 
-		'skills' : ['Python', 'JavaScript', 'HTML', 'CSS', 'Postgre SQL', 'Linux', 'GIT'],
-		'bioPic' : 'https://'}
 
 
-var formattedName = HTMLheaderName.replace('%data%', bio['name']);
+var bio = {"name" : "Anton Iovbak", "role" : "Web Developer", 
+		"contacts" : {"email" : "antoniovbak14@gmail.com", "phone number" : "+7 777 002 44 35",
+		"GitHub account" : "AInsolence", "location" : "Almaty"}, 
+		"welcome_message" : "Hello! Nice to meet you here dudes!", 
+		"skills" : ["Python", "JavaScript", "HTML", "CSS", "Postgre SQL", "Linux", "GIT"],
+		"bioPic" : "https://"}
 
-$("#header").append(formattedName);
+var work = {"position" : "Web Developer",
+			"employer" : "Udacity",
+			"years_work" : "1",
+			"city" : "San Francisco"};
 
-var work = {};
-work.position = 'Web Developer';
-work.employer = 'Udacity';
-work.years_work = '1';
-work.city = 'San Francisco';
-
-var education = {};
-education['school'] = 'Udacity online university';
-education['years_attend'] = '1';
-
-$("#main").prepend(work['position']);
-$("#main").prepend(' ');
-$("#main").prepend(education.school);
+var education = {
+				"schools" : [
+				{"name" : "KazNU",
+				"city": "Almaty",
+				"degree" : "BA",
+				"major" : "Psychology"					
+				},
+				{"name" : "Almaty Humanitarium and Technical University",
+				"city" : "Almaty",
+				"degree" : "BA",
+				"major" : "Economy"}
+				],
+				"online_edu" : {"name" : "Udacity Online University",
+				"city" : "San Francisco",
+				"degree" : "BA",
+				"major" : "Computer Science"}
+				};
+				
+var projects = {
+				"Web Crawler Engine" : ["Python"]
+				"Petlife site" : ["HTML", "CSS"]
+				"Tournament" : ["Python", "Postgre SQL", "Vagrant"]
+				"Resume" : ["JavaScript", "JSON", "JQuery"]
+}
