@@ -40,7 +40,7 @@ var projects = { "my projects" : [
 				"description" : "Simple site on HTML5 and CSS3 using Bootstrap framework"}, 
 				{"title" : "Tournament", "technologies" : ["Python", "Postgre SQL", "Virtual Box", "Vagrant"], 
 				"date" : "june 2016", 
-				"description" : "Tournament system used SWISS tournament using Postgre SQL tables and Python module"}, 
+				"description" : "Tournament table used SWISS score count system, stored data in Postgre SQL DB and managed with Python module"}, 
 				{"title" : "Resume", "technologies" : ["HTML", "CSS", "JavaScript", "JSON", "JQuery"],
 				"date" : "july 2016", 
 				"description" : "Interactive web site with information for employers using JavaScript"}]};
