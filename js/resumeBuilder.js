@@ -9,7 +9,7 @@ var bio = {"name" : "Anton Iovbak", "role" : "Web Developer",
 		"GitHub account" : "AInsolence", "location" : "Almaty"}, 
 		"welcome_message" : "Hello! Nice to meet you here dudes!", 
 		"skills" : ["Python", "JavaScript", "HTML", "CSS", "Postgre SQL", "Linux", "GIT"],
-		"bioPic" : "https://"}
+		"bioPic" : "https://"};
 
 var work = {"position" : "Web Developer",
 			"employer" : "Udacity",
@@ -31,12 +31,16 @@ var education = {
 				"online_edu" : {"name" : "Udacity Online University",
 				"city" : "San Francisco",
 				"degree" : "BA",
-				"major" : "Computer Science"}
-				};
+				"major" : "Computer Science"}};
 				
-var projects = {
-				"Web Crawler Engine" : ["Python"]
-				"Petlife site" : ["HTML", "CSS"]
-				"Tournament" : ["Python", "Postgre SQL", "Vagrant"]
-				"Resume" : ["JavaScript", "JSON", "JQuery"]
-}
+var projects = { "my projects" : [
+				{"title" : "Web Crawler Engine", "technologies" : ["Python"], "date" : "march 2016",
+				"description" : "Web crawler engine on Python with indexing and ranking sites from web."}, 
+				{"title" : "Petlife site", "technologies" : ["HTML", "CSS"], "date" : "may 2016", 
+				"description" : "Simple site on HTML5 and CSS3 using Bootstrap framework"}, 
+				{"title" : "Tournament", "technologies" : ["Python", "Postgre SQL", "Virtual Box", "Vagrant"], 
+				"date" : "june 2016", 
+				"description" : "Tournament system used SWISS tournament using Postgre SQL tables and Python module"}, 
+				{"title" : "Resume", "technologies" : ["HTML", "CSS", "JavaScript", "JSON", "JQuery"],
+				"date" : "july 2016", 
+				"description" : "Interactive web site with information for employers using JavaScript"}]};
