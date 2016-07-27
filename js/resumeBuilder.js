@@ -2,7 +2,7 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-
+//Define variables with information about person
 
 var bio = {"name" : "Anton Iovbak", "role" : "Web Developer", 
 		"contacts" : {"email" : "antoniovbak14@gmail.com", "phone number" : "+7 777 002 44 35",
@@ -11,10 +11,19 @@ var bio = {"name" : "Anton Iovbak", "role" : "Web Developer",
 		"skills" : ["Python", "JavaScript", "HTML", "CSS", "Postgre SQL", "Linux", "GIT"],
 		"bioPic" : "https://"};
 
-var work = {"position" : "Web Developer",
-			"employer" : "Udacity",
-			"years_work" : "1",
-			"city" : "San Francisco"};
+var work = {
+			"jobs" : [
+			{
+				"position" : "Web Developer",
+				"employer" : "Udacity",
+				"years_work" : "1",
+				"city" : "San Francisco"}, 
+			{
+			"position" : "Python Developer",
+			"employer" : "Udacious",
+			"years_work" : "0.5",
+			"city" : "New York"}
+			]};
 
 var education = {
 				"schools" : [
@@ -45,17 +54,25 @@ var projects = { "my projects" : [
 				"date" : "july 2016", 
 				"description" : "Interactive web site with information for employers using JavaScript"}]};
 
-		
-if (bio.skills.length > 0){
-	$("#header").append(HTMLskillsStart);
+// Adding skills to index.html
+
+$("#header").append(HTMLskillsStart);
 	
-	for (skill in bio.skills){
-		var formattedSkill = HTMLskills.replace("%data%", bio.skills[n]);
+for (skill in bio.skills) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#skills").append(formattedSkill);
 	}
-}
+
+//Adding work experience to index.html
+
+$("#workExperience").append(HTMLworkStart);
+
+for (job in work.jobs) {
+	
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		$(".work-entry").append(formattedEmployer);
 		
-	
-console.log(formattedSkill);
-	
-}
+		var formattedworkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
+		$(".work-entry").append(formattedworkTitle);
+	};
+
