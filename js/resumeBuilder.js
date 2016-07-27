@@ -44,3 +44,17 @@ var projects = { "my projects" : [
 				{"title" : "Resume", "technologies" : ["HTML", "CSS", "JavaScript", "JSON", "JQuery"],
 				"date" : "july 2016", 
 				"description" : "Interactive web site with information for employers using JavaScript"}]};
+
+		
+if (bio.skills.length > 0){
+	$("#header").append(HTMLskillsStart);
+	
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);	
+	
+console.log(formattedSkill);
+	
+}
