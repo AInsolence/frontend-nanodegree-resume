@@ -111,7 +111,7 @@ $(document).on("click", function(click_location){
 
 // International Names in resume:
 
-$("#header").append(internationalizeButton);
+$("#main").append(internationalizeButton);
 
 function inName(full_name){
 	var name = full_name.trim().split(' ');
@@ -125,10 +125,12 @@ function inName(full_name){
 projects.display = function (){
 	for (var pro in projects["my projects"]) {
 	$("#projects").append(HTMLprojectStart);
+	
 	var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projects["my projects"][pro].title);
 	var formattedProjectDates = HTMLprojectDates.replace('%data%', projects["my projects"][pro].date);
-	var formattedProjectDescription = HTMLprojectDescription.replace('%data%', projects["my projects"][pro].description);
 	var formattedProjectImage = HTMLprojectImage.replace('%data%', projects["my projects"][pro].image);
+	var formattedProjectDescription = HTMLprojectDescription.replace('%data%', projects["my projects"][pro].description);
+	
 	$(".project-entry:last").append(formattedProjectTitle);
 	$(".project-entry:last").append(formattedProjectDates);
 	$(".project-entry:last").append(formattedProjectDescription);
@@ -137,3 +139,9 @@ projects.display = function (){
 }
 
 projects.display();
+
+$("#mapDiv").append(googleMap);
+
+
+
+
