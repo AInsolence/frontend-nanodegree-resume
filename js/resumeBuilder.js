@@ -9,7 +9,7 @@ var bio = {"name" : "Anton Iovbak", "role" : "Web Developer",
 		"GitHub account" : "AInsolence", "location" : "Almaty"}, 
 		"welcome_message" : "Hello! Nice to meet you here dudes!", 
 		"skills" : ["Python", "JavaScript", "HTML", "CSS", "Postgre SQL", "Linux", "GIT"],
-		"bioPic" : "http://i.telegraph.co.uk/multimedia/archive/03597/POTD_chick_3597497k.jpg"};
+		"bioPic" : "https://pbs.twimg.com/profile_images/2881220369/2b27ac38b43b17a8c5eacfc443ce3384_400x400.jpeg"};
 
 var work = {
 			"jobs" : [
@@ -55,10 +55,10 @@ var on_education = {
 var projects = { "my projects" : [
 				{"title" : "Web Crawler Engine", "technologies" : ["Python"], "date" : "march 2016",
 				"description" : "Web crawler engine on Python with indexing and ranking sites from web.",
-				"image" : "http://blog.belatrixsf.com/wp-content/uploads/2014/07/web-crawler.jpg"}, 
+				"image" : "http://www.maran.com/dictionary/w/web/image.gif"}, 
 				{"title" : "Petlife site", "technologies" : ["HTML", "CSS"], "date" : "may 2016", 
 				"description" : "Simple site on HTML5 and CSS3 using Bootstrap framework",
-				"image" : "https://www.ellipseinc.com/documents/userfiles/image/24751/Pets.jpg"}, 
+				"image" : "https://www.mercergov.org/Images/ImageManager/pets.jpg"}, 
 				{"title" : "Tournament", "technologies" : ["Python", "Postgre SQL", "Virtual Box", "Vagrant"], 
 				"date" : "june 2016", 
 				"description" : "Tournament table used SWISS score count system, stored data in Postgre SQL DB and managed with Python module",
@@ -66,7 +66,7 @@ var projects = { "my projects" : [
 				{"title" : "Resume", "technologies" : ["HTML", "CSS", "JavaScript", "JSON", "JQuery"],
 				"date" : "july 2016", 
 				"description" : "Interactive web site with information for employers using JavaScript",
-				"image" : "http://insight.jbs.cam.ac.uk/assets/2016_news_computerscience-883x432.jpg"}]};
+				"image" : "http://www.youngmindstechnologies.com/images/webdesign.png"}]};
 
 
 // Adding personal info to index.html:
