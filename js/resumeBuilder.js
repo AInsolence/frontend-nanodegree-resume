@@ -146,7 +146,7 @@ projects.display = function (){
 
 projects.display();
 
-//Encapsulating display method for education object:
+//Encapsulating display method for education and on_education object:
 
 education.display = function (){
 	for (var school in education.schools) {
