@@ -2,26 +2,6 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-<<<<<<< HEAD
-/*$("#main").append('Anton')*/
-
-/*var awesomeThoughts = "I am Anton and I am Awesome";
-console.log(awesomeThoughts);
-
-var funThoughts = awesomeThoughts.replace('Awesome', 'Fun');
-console.log(funThoughts);
-
-$("#main").append(funThoughts); */
-
-var name = 'Anton Iovbak';
-var role = 'Python Web Developer';
-
-var formattedName = HTMLheaderName.replace('%data%', name);
-$('#header').append(formattedName);
-
-var formattedRole = HTMLheaderRole.replace('%data%', role);
-$('#header').prepend(formattedRole);
-=======
 //Define variables with information about person:
 
 var bio = {"name" : "Anton Iovbak", "role" : "Web Developer", 
@@ -165,4 +145,3 @@ $("#mapDiv").append(googleMap);
 
 
 
->>>>>>> ae614de626526c67d09f26c455d12311574cc8f1
