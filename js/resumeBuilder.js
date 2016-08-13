@@ -2,7 +2,6 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-<<<<<<< HEAD
 /*$("#main").append('Anton')*/
 
 /*var awesomeThoughts = "I am Anton and I am Awesome";
@@ -21,7 +20,7 @@ $('#header').append(formattedName);
 
 var formattedRole = HTMLheaderRole.replace('%data%', role);
 $('#header').prepend(formattedRole);
-=======
+
 //Define variables with information about person:
 
 var bio = {"name" : "Anton Iovbak", "role" : "Web Developer", 
@@ -209,8 +208,3 @@ on_education.display();
 //Adding googleMap:
 
 $("#mapDiv").append(googleMap);
-
-
-
-
->>>>>>> ae614de626526c67d09f26c455d12311574cc8f1
