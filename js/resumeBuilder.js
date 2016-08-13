@@ -29,7 +29,7 @@ var bio = {"name" : "Anton Iovbak", "role" : "Web Developer",
 		"GitHub account" : "AInsolence", "location" : "Almaty"}, 
 		"welcome_message" : "Hello! Nice to meet you here dudes!", 
 		"skills" : ["Python", "JavaScript", "HTML", "CSS", "Postgre SQL", "Linux", "GIT"],
-		"bioPic" : "http://i.telegraph.co.uk/multimedia/archive/03597/POTD_chick_3597497k.jpg"};
+		"bioPic" : "https://pbs.twimg.com/profile_images/2881220369/2b27ac38b43b17a8c5eacfc443ce3384_400x400.jpeg"};
 
 var work = {
 			"jobs" : [
@@ -54,25 +54,31 @@ var education = {
 				{"name" : "KazNU",
 				"city": "Almaty",
 				"degree" : "BA",
-				"major" : "Psychology"					
+				"major" : "Psychology",
+				"date" : "01.2004 - 06.2008"
 				},
 				{"name" : "Almaty Humanitarium and Technical University",
 				"city" : "Almaty",
 				"degree" : "BA",
-				"major" : "Economy"}
-				],
-				"online_edu" : {"name" : "Udacity Online University",
-				"city" : "San Francisco",
-				"degree" : "BA",
-				"major" : "Computer Science"}};
+				"major" : "Economy",
+				"date" : "01.2009 - 06.2011"}]
+};
+
+var on_education = {
+				"online_edu" : [{"on_name" : "Udacity Online University",
+				"on_degree" : "BA",
+				"on_title" : "Computer Science",
+				"on_date" : "02.2016 - till now",
+				"on_url" : "https://www.udacity.com/"}]
+				};
 				
 var projects = { "my projects" : [
 				{"title" : "Web Crawler Engine", "technologies" : ["Python"], "date" : "march 2016",
 				"description" : "Web crawler engine on Python with indexing and ranking sites from web.",
-				"image" : "http://blog.belatrixsf.com/wp-content/uploads/2014/07/web-crawler.jpg"}, 
+				"image" : "http://www.maran.com/dictionary/w/web/image.gif"}, 
 				{"title" : "Petlife site", "technologies" : ["HTML", "CSS"], "date" : "may 2016", 
 				"description" : "Simple site on HTML5 and CSS3 using Bootstrap framework",
-				"image" : "https://www.ellipseinc.com/documents/userfiles/image/24751/Pets.jpg"}, 
+				"image" : "https://www.mercergov.org/Images/ImageManager/pets.jpg"}, 
 				{"title" : "Tournament", "technologies" : ["Python", "Postgre SQL", "Virtual Box", "Vagrant"], 
 				"date" : "june 2016", 
 				"description" : "Tournament table used SWISS score count system, stored data in Postgre SQL DB and managed with Python module",
@@ -80,7 +86,7 @@ var projects = { "my projects" : [
 				{"title" : "Resume", "technologies" : ["HTML", "CSS", "JavaScript", "JSON", "JQuery"],
 				"date" : "july 2016", 
 				"description" : "Interactive web site with information for employers using JavaScript",
-				"image" : "http://insight.jbs.cam.ac.uk/assets/2016_news_computerscience-883x432.jpg"}]};
+				"image" : "http://www.youngmindstechnologies.com/images/webdesign.png"}]};
 
 
 // Adding personal info to index.html:
@@ -102,7 +108,7 @@ for (skill in bio.skills) {
 //Define function added work experience to index.html:
 
 
-function displayWork() {
+work.display = function () {
 
 	for (job in work.jobs) {
 		
@@ -119,7 +125,7 @@ function displayWork() {
 		$(".work-entry:last").append(formattedworkDescription);
 }};
 
-displayWork()
+work.display();
 
 //Show in console click location position:
 
@@ -140,7 +146,7 @@ function inName(full_name){
 	return (firstName + ' ' + lastName);
 }
 
-//Encapsulating display method to projects object:
+//Encapsulating display function for projects object:
 
 projects.display = function (){
 	for (var pro in projects["my projects"]) {
@@ -150,7 +156,7 @@ projects.display = function (){
 	var formattedProjectDates = HTMLprojectDates.replace('%data%', projects["my projects"][pro].date);
 	var formattedProjectImage = HTMLprojectImage.replace('%data%', projects["my projects"][pro].image);
 	var formattedProjectDescription = HTMLprojectDescription.replace('%data%', projects["my projects"][pro].description);
-	
+
 	$(".project-entry:last").append(formattedProjectTitle);
 	$(".project-entry:last").append(formattedProjectDates);
 	$(".project-entry:last").append(formattedProjectDescription);
@@ -159,6 +165,48 @@ projects.display = function (){
 }
 
 projects.display();
+
+//Encapsulating display method for education and on_education object:
+
+education.display = function (){
+	for (var school in education.schools) {
+	$("#education").append(HTMLschoolStart);
+	
+	var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[school].name);
+	var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
+	var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[school].date);
+	var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[school].city);
+	var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[school].major);
+	
+	$(".education-entry:last").append(formattedSchoolName);
+	$(".education-entry:last").append(formattedSchoolDegree);
+	$(".education-entry:last").append(formattedSchoolDates);
+	$(".education-entry:last").append(formattedSchoolLocation);
+	$(".education-entry:last").append(formattedSchoolMajor);	
+	};
+}
+
+on_education.display = function () {
+		for (var on_school in on_education.online_edu) {
+		$(".education-entry:last").append(HTMLonlineClasses);
+		
+		var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', on_education.online_edu[on_school].on_title);
+		var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', on_education.online_edu[on_school].on_name);
+		var formattedOnlineDates = HTMLonlineDates.replace('%data%', on_education.online_edu[on_school].on_date);
+		var formattedOnlineURL = HTMLonlineURL.replace('%data%', on_education.online_edu[on_school].on_url);
+		
+		$(".education-entry:last").append(formattedOnlineTitle);
+		$(".education-entry:last").append(formattedOnlineSchool);
+		$(".education-entry:last").append(formattedOnlineDates);
+		$(".education-entry:last").append(formattedOnlineURL);
+		};
+}
+
+education.display();
+on_education.display();
+
+
+//Adding googleMap:
 
 $("#mapDiv").append(googleMap);
 
