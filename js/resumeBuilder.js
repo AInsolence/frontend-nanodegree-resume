@@ -12,14 +12,6 @@ console.log(funThoughts);
 
 $("#main").append(funThoughts); */
 
-var name = 'Anton Iovbak';
-var role = 'Python Web Developer';
-
-var formattedName = HTMLheaderName.replace('%data%', name);
-$('#header').append(formattedName);
-
-var formattedRole = HTMLheaderRole.replace('%data%', role);
-$('#header').prepend(formattedRole);
 
 //Define variables with information about person:
 
