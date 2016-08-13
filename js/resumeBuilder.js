@@ -2,17 +2,6 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-/*$("#main").append('Anton')*/
-
-/*var awesomeThoughts = "I am Anton and I am Awesome";
-console.log(awesomeThoughts);
-
-var funThoughts = awesomeThoughts.replace('Awesome', 'Fun');
-console.log(funThoughts);
-
-$("#main").append(funThoughts); */
-
-
 //Define variables with information about person:
 
 var bio = {"name" : "Anton Iovbak", "role" : "Web Developer", 
